@@ -3,7 +3,7 @@
 @section('content')
   <h1>New Task</h1>
   @if($errors->any())
-    <div class="alert alert-danger" role="alert">
+    <div class="alert btn-danger" role="alert">
       <ul>
         @foreach($errors->all() as $error)
           <li>{{ $error }}</li>
@@ -14,12 +14,12 @@
 
   <form method="POST" action="/tasks">
     @csrf
-    <div class="form-group">
-      <label for="description">Task Description</label>
+    <div class="form-group des">
+      <label for="description ">Task Description</label>
       <input class="form-control" name="description" />
     </div>
     <div class="form-group">
-      <button type="submit" class="btn btn-primary">Create Task</button>
+      <button type="submit" class="btn btns">Create Task</button>
     </div>
   </form>
 @endsection
